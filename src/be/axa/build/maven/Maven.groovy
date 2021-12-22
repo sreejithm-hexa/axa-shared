@@ -92,17 +92,17 @@ class Maven implements Serializable {
         if (secureTokenFileName.equals(null)) {
             
         this.build([JAVADOC_SKIP_TRUE, TEST_SKIP_EXEC_FALSE, SKIP_TESTS_FALSE, TEST_SKIP_FALSE, TEST_FAILURE_IGNORE,
-                    AWT_HEADLESS_TRUE, BUILD_OPTS_CI, CLEAN, JACOCO, PROFILE_UFEMS, INSTALL, ALT_DEP_REPO].join(SEPARATOR))
+                    AWT_HEADLESS_TRUE, BUILD_OPTS_CI, CLEAN, JACOCO, PROFILE_UFEMS, INSTALL].join(SEPARATOR))
         }
         else {
             
             this.build([JAVADOC_SKIP_TRUE, TEST_SKIP_EXEC_FALSE, SKIP_TESTS_FALSE, TEST_SKIP_FALSE, TEST_FAILURE_IGNORE,
-                    AWT_HEADLESS_TRUE, BUILD_OPTS_CI, CLEAN, JACOCO, INSTALL, ALT_DEP_REPO].join(SEPARATOR))
+                    AWT_HEADLESS_TRUE, BUILD_OPTS_CI, CLEAN, JACOCO, INSTALL].join(SEPARATOR))
         }
     }
 
     def deploy(String profile){
-        this.build([profile,SKIP_TESTS_TRUE, TEST_SKIP_TRUE, DEPLOY, ALT_DEP_REPO].join(SEPARATOR))
+        this.build([profile,SKIP_TESTS_TRUE, TEST_SKIP_TRUE, DEPLOY].join(SEPARATOR))
     }
 
     def sonarQube(){
