@@ -56,7 +56,7 @@ class Maven implements Serializable {
     public static final String BUILD_OPTS_CI = ['-B','-V','-U','-c','-fae','-T 1C'].join(SEPARATOR)
 
     // Maven java code coverage plugin : prepare unit testing code coverage report for Sonarqube
-    public static final String JACOCO = "org.jacoco:jacoco-maven-plugin:0.8.1:prepare-agent"
+    public static final String JACOCO = "org.jacoco:jacoco-maven-plugin:0.8.5:prepare-agent"
 
     // Maven Sonarqube static code analysis plugin : launch asynchronously the analysis on the sonarqube Server
     public static final String SONARQUBE = "org.sonarsource.scanner.maven:sonar-maven-plugin:3.5.0.1254:sonar"
